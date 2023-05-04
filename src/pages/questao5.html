@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 05</title>
+    <link rel="stylesheet" href="../styles/index.css">
+</head>
+<header>
+    <nav class="voltar">
+        <a href="../index.html">
+            Voltar a Home
+        </a>
+    </nav>
+</header>
+
+<section>
+    <br>
+    <br>
+    <form>
+        <label>
+          <input type="checkbox" name="item1"> Item 1
+        </label>
+        <br>
+        <label>
+          <input type="checkbox" name="item2"> Item 2
+        </label>
+        <br>
+        <label>
+          <input type="checkbox" name="item3"> Item 3
+        </label>
+        <br>
+        <button type="submit" disabled>Enviar</button>
+      </form>
+</section>    
+</body>
+      <script>
+        const checkboxes = document.querySelectorAll('input[type=checkbox]');
+        const button = document.querySelector('button');
+      
+        checkboxes.forEach((checkbox) => {
+          checkbox.addEventListener('change', () => {
+            const checkedCount = document.querySelectorAll('input[type=checkbox]:checked').length;
+            if (checkedCount >= 2) {
+              button.disabled = false;
+            } else {
+              button.disabled = true;
+            }
+          });
+        });
+      </script>
+</html>
+
+<!-- 5 - Crie um formulário de seleção de itens com checkbox. O formulário deve possuir um botão desabilitado. O botão 
+só se torna clicável quando tiver pelo menos 2 checkboxs marcado. -->

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercicio 01</title>
+    <link rel="stylesheet" href="../styles/index.css" />
+  </head>
+  <body>
+
+    <header>
+        <nav class="voltar">
+            <a href="../index.html">
+                Voltar a Home
+            </a>
+        </nav>
+    </header>
+
+    <h1>Escolha uma cor:</h1>
+    <a href="#" onmouseover="vermelho()" onmouseout="preto()">Vermelho</a><br />
+    <a href="#" onmouseover="azul()" onmouseout="preto()">Azul</a><br />
+    <a href="#" onmouseover="verde()" onmouseout="preto()">Verde</a><br />
+    <a href="#" onmouseover="amarelo()" onmouseout="preto()">Amarelo</a><br />
+  </body>
+  <script>
+    function vermelho() {
+      document.body.style.backgroundColor = "red";
+    }
+    function azul() {
+      document.body.style.backgroundColor = "blue";
+    }
+    function verde() {
+      document.body.style.backgroundColor = "green";
+    }
+    function amarelo() {
+      document.body.style.backgroundColor = "yellow";
+    }
+    function preto() {
+      document.body.style.backgroundColor = "black";
+    }
+  </script>
+</html>
+
+<!-- Crie uma página com 4 links (tag <a>),
+     cada um representando o nome de uma cor, que, utilizando o evento 
+    onmouseover altere a cor do plano de fundo para cor correspondente. -->

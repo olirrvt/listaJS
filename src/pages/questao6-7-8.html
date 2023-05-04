@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 01</title>
+    <link rel="stylesheet" href="../styles/index.css">
+</head>
+<body>
+    <header>
+        <nav class="voltar">
+            <a href="../index.html">
+                Voltar a Home
+            </a>
+        </nav>
+    </header>
+    
+    <section>
+        <p id="texto">Os cães são animais domésticos populares em todo o mundo. Eles são conhecidos por sua lealdade e amizade com os seres humanos. Os cães vêm em diferentes tamanhos e raças, e cada um tem sua personalidade única. Eles podem ser treinados para fazer várias tarefas, como caçar, pastorear o gado, guardar a casa e auxiliar as pessoas com deficiência. No entanto, é importante lembrar que ter um cão requer responsabilidade e cuidados adequados.</p>
+
+        <!-- Exercicio 6 -->
+        <button id="fonte-branca">Fonte Branca</button>
+        <button id="fonte-preta">Fonte Preta</button>
+        <button id="fundo-branco">Fundo Branco</button>
+        <button id="fundo-preto">Fundo Preto</button>
+        <!-- Exercicio 7 -->
+        <button id="aumentar-fonte">+</button>
+        <button id="diminuir-fonte">-</button>
+        <!-- Exercicio 8 -->
+        <button id="maiusculas">Maiúsculas</button>
+        <button id="minusculas">Minúsculas</button>
+    </section>
+
+</body>
+<script>
+	var texto = document.getElementById("texto");
+	var fonteBranca = document.getElementById("fonte-branca");
+	var fontePreta = document.getElementById("fonte-preta");
+	var fundoBranco = document.getElementById("fundo-branco");
+	var fundoPreto = document.getElementById("fundo-preto");
+	var aumentarFonte = document.getElementById("aumentar-fonte");
+	var diminuirFonte = document.getElementById("diminuir-fonte");
+	var maiusculas = document.getElementById("maiusculas");
+	var minusculas = document.getElementById("minusculas");
+
+	fonteBranca.onclick = function() {
+		texto.style.color = "white";
+	}
+
+	fontePreta.onclick = function() {
+		texto.style.color = "black";
+	}
+
+	fundoBranco.onclick = function() {
+		texto.style.backgroundColor = "white";
+	}
+
+	fundoPreto.onclick = function() {
+		texto.style.backgroundColor = "black";
+	}
+
+	aumentarFonte.onclick = function() {
+		var tamanhoAtual = parseInt(window.getComputedStyle(texto).fontSize);
+		texto.style.fontSize = (tamanhoAtual + 2) + "px";
+	}
+
+	diminuirFonte.onclick = function() {
+		var tamanhoAtual = parseInt(window.getComputedStyle(texto).fontSize);
+		texto.style.fontSize = (tamanhoAtual - 2) + "px";
+	}
+
+	maiusculas.onclick = function() {
+		texto.textContent = texto.textContent.toUpperCase();
+	}
+
+	minusculas.onclick = function() {
+		texto.textContent = texto.textContent.toLowerCase();
+	}
+</script>
+</html>
+
+<!-- Crie um parágrafo com um texto como conteúdo. Crie 4 botões. Dois para trocar a cor da fonte, de branco para 
+preto e vice-versa e outros dois para fazer o mesmo com o fundo do parágrafo. Use divs se julgar necessário. -->
+
+<!-- Crie um botão + (mais) e outro – (menos) na mesma página do exercício anterior. Esses botões aumentam e 
+diminuem o tamanho da fonte, respectivamente. -->
+
+<!-- Ainda continuando no exercício 6, faça um botão que transforme todo o texto do parágrafo em maiúscula, e outro 
+em minúscula. -->
+
+
+

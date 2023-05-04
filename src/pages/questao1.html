@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 01</title>
+    <link rel="stylesheet" href="../styles/index.css">
+</head>
+<style>
+    form {
+        display: flex; 
+        flex-direction: column; 
+        margin: 5em; 
+        gap: 2em;
+    }
+
+    button {
+        padding: 1em;
+        cursor: pointer;
+        color: #fff;
+        font-weight: bold;
+    }
+</style>
+<body>
+
+    <header>
+        <nav class="voltar">
+            <a href="../index.html">
+                Voltar a Home
+            </a>
+        </nav>
+    </header>
+
+    <form>
+        <button onclick="verde()" style="background-color: #006600;" id="btn-verde" type="button">
+            Botão Cor Verde
+        </button>
+
+        <button onclick="azul()" style="background-color: #0000ff;" id="btn-azul" type="button">
+            Botão Cor Azul
+        </button>
+
+        <button onclick="vermelho()" style="background-color: #800000;" id="btn-vermelho" type="button">
+            Botão Cor Vermelho
+        </button>
+
+        <button onclick="rosa()" style="background-color: #FF1493;" id="btn-rosa" type="button">
+            Botão Cor Rosa
+        </button>
+    </form>
+</body>
+
+<script>
+    
+    function verde()
+    {
+        document.body.style.backgroundColor = "#006600";
+    }
+    function azul()
+    {
+        document.body.style.backgroundColor = "#0000ff";
+    }
+    function vermelho()
+    {
+        document.body.style.backgroundColor = "#800000";
+    }
+    function rosa()
+    {
+        document.body.style.backgroundColor = "#FF1493";
+    }
+
+</script>
+
+</html>
+
+<!-- 1 - Crie um formulário com 4 botões que, ao clicar em cada um, altere a cor do plano de fundo da página para vermelho, 
+verde, azul e amarelo, respectivamente. -->

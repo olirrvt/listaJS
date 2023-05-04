@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 01</title>
+    <link rel="stylesheet" href="../styles/index.css">
+</head>
+<style>
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+</style>
+<body>
+    <header>
+        <nav class="voltar">
+            <a href="../index.html">
+                Voltar a Home
+            </a>
+        </nav>
+    </header>
+    <section>
+        <form id="cadastro-usuario" method="POST" action="">
+            <label for="login">Login:</label>
+            <input type="text" id="login" name="login" required>
+            <br>
+            
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha" minlength="6" maxlength="10" required>
+            <br>
+            
+            <label for="confirma-senha">Confirme a senha:</label>
+            <input type="password" id="confirma-senha" name="confirma-senha" minlength="6" maxlength="10" required>
+            <br>
+            
+            <button type="submit">Cadastrar</button>
+          </form>          
+    </section>
+</body>
+<script>
+    const form = document.getElementById('cadastro-usuario');
+
+    const sucessoMsg = document.createElement('p');
+    sucessoMsg.style.color = 'green';
+    sucessoMsg.style.fontWeight = 'bold';
+
+    form.addEventListener('submit', (event) => {
+
+    const senha = document.getElementById('senha').value;
+    const confirmaSenha = document.getElementById('confirma-senha').value;
+
+    if (form.checkValidity() && senha === confirmaSenha) {
+        event.preventDefault();
+        // Então, professor, coloquei o prevent default aqui para
+        // ele não deixar que o form seja submetido, mas coloquei uma msg
+        sucessoMsg.textContent = 'O formulário foi enviado com sucesso!';
+        form.appendChild(sucessoMsg);
+    } else {
+        event.preventDefault();
+        // Exibe uma mensagem de erro
+        alert('As senhas precisam ser iguais e ter entre 6 e 10 caracteres!');
+    }
+    });
+</script>
+</html>
+
+<!-- 9 - Crie um formulário com os campos para cadastrar o usuário de um sistema (login, senha e confirmar senha). Permita 
+que a página seja submetida apenas se todos os campos estiverem preenchidos, se os campos senha e confirma senha 
+forem iguais e a senha possuir entre 6 e 10 caracteres. -->

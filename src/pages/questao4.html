@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 01</title>
+    <link rel="stylesheet" href="../styles/index.css">
+</head>
+<body>
+    <header>
+        <nav class="voltar">
+            <a href="../index.html">
+                Voltar a Home
+            </a>
+        </nav>
+    </header>
+
+    <section>
+        <p id="texto">
+            A tecnologia está em constante evolução e tem se mostrado cada vez mais presente em nossas vidas. Nos últimos anos, temos visto avanços significativos em áreas como inteligência artificial, realidade aumentada e virtual, automação e blockchain. Essas tecnologias estão mudando a forma como vivemos, trabalhamos e nos relacionamos com o mundo ao nosso redor.</p>
+        <button onclick="toggleTexto()">Mostrar/Esconder</button>
+    </section>
+
+</body>
+<script>
+    function toggleTexto() {
+      var x = document.getElementById("texto");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+</script>
+</html>
+
+<!-- Crie um parágrafo (<p>) com um texto como conteúdo. Adicione um botão que, ao ser clicado, oculte ou mostre o texto do parágrafo. -->
